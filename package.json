@@ -1,7 +1,7 @@
 {
-  "name": "@hh.ru/react-d3-chart-graphs",
+  "name": "37bytes-react-d3-chart-graphs",
   "version": "6.1.0",
-  "description": "A javascript library for building charts components made with React.js and D3.js",
+  "description": "A javascript library for building charts components made with React.js and D3.js | fork @hh.ru/react-d3-chart-graphs",
   "main": "dist/index.js",
   "style": "dist/styles.css",
   "files": [
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hhru/react-d3-chart-graphs"
+    "url": "https://github.com/37bytes/react-d3-chart-graphs"
   },
   "private": false,
   "keywords": [
