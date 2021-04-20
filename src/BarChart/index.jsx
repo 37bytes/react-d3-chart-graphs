@@ -32,6 +32,7 @@ class Chart extends Component {
             min: PropTypes.string,
             max: PropTypes.string,
         }),
+        renderAfter: PropTypes.func,
     };
 
     xScale = scaleBand();
@@ -62,7 +63,7 @@ class Chart extends Component {
     };
 
     render() {
-        const { data, paddingMultiplier, axesProps, margins, colorScale } = this.props;
+        const { data, paddingMultiplier, axesProps, margins, colorScale, renderAfter } = this.props;
         const { legend, padding, ticksCount, tickFormat } = axesProps;
         const defaultPaddingMultiplier = 0;
         const defaultMargins = { top: 10, right: 10, bottom: 150, left: 80 };
@@ -119,6 +120,13 @@ class Chart extends Component {
                     colorScale={colorScaleInterpolate}
                     svgDimensions={svgDimensions}
                 />
+                {renderAfter &&
+                    renderAfter({
+                        scales: { xScale, yScale },
+                        isClickable: !!this.handleBarClick,
+                        margins: canvasMargins,
+                        svgDimensions,
+                    })}
             </svg>
         );
     }

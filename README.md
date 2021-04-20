@@ -667,3 +667,6 @@ Up react-scripts version in examples
 
 Change `render` prop for Gantt chart (`render` -> `renderBefore`)  
 Add `renderAfter` prop for Gantt chart
+
+### 6.2.0 
+Add `renderAfter` prop for BarsChart
