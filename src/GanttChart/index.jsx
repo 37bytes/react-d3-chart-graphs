@@ -30,6 +30,7 @@ class Chart extends Component {
         }),
         renderBefore: PropTypes.func,
         renderAfter: PropTypes.func,
+        renderBarDescription: PropTypes.func,
         parentWidth: PropTypes.number,
     };
 
@@ -65,6 +66,7 @@ class Chart extends Component {
             fillOpacity,
             renderBefore,
             renderAfter,
+            renderBarDescription,
         } = this.props;
         const { legend, padding, tickFormat, ticksCount } = axesProps;
         const defaultMargins = { top: 10, right: 10, bottom: 150, left: 80 };
@@ -107,7 +109,11 @@ class Chart extends Component {
 
         return (
             <div>
-                <BarDescription stackColors={stackColors} left={canvasMargins.left} />
+                {renderBarDescription ? (
+                    renderBarDescription({ stackColors, left: canvasMargins.left })
+                ) : (
+                    <BarDescription stackColors={stackColors} left={canvasMargins.left} />
+                )}
                 <svg
                     onMouseMove={this.props.handleBarHover ? this.handleMouseMove : undefined}
                     onClick={this.props.handleBarClick ? this.handleBarClick : undefined}

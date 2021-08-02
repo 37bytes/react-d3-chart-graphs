@@ -7,14 +7,4 @@ import ResponsiveWrapper from './ResponsiveWrapper';
 import LineChartTime from './LineChartTime';
 import Legend from './Legends';
 
-export {
-    Axes,
-    BarChart,
-    StackedBarChart,
-    BoxPlot,
-    ResponsiveWrapper,
-    Legend,
-    GanttChart,
-    LineChartTime,
-};
-
+export { Axes, BarChart, StackedBarChart, BoxPlot, ResponsiveWrapper, Legend, GanttChart, LineChartTime };

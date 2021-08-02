@@ -670,3 +670,6 @@ Add `renderBefore` prop for Gantt chart
 
 ### 6.2.0 
 Add `renderAfter` prop for BarsChart
+
+### 6.3.0 
+Add `renderBarDescription` prop for Gantt chart
