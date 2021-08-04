@@ -673,3 +673,6 @@ Add `renderAfter` prop for BarsChart
 
 ### 6.3.0 
 Add `renderBarDescription` prop for Gantt chart
+
+### 6.3.2 
+Expand `axesProps (add ticksCount.minXAxisTicksCount)` prop for Gantt chart

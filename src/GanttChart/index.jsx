@@ -87,11 +87,15 @@ class Chart extends Component {
         const yDomain = data.map((item) => item.titleBar);
         const datesDomain = d3extent(datePlainList, (d) => new Date(d));
 
+        const minXAxisTicksCount = Math.min(
+            Math.floor((datesDomain[1] - datesDomain[0]) / (1000 * 60 * 60 * 24)),
+            (ticksCount && ticksCount.xAxis) || 30
+        );
         const AxesTicksCount = {
-            xAxis: Math.min(
-                Math.floor((datesDomain[1] - datesDomain[0]) / (1000 * 60 * 60 * 24)),
-                (ticksCount && ticksCount.xAxis) || 30
-            ),
+            xAxis:
+                ticksCount && ticksCount.xAxisForceMin
+                    ? Math.max(minXAxisTicksCount, ticksCount.xAxisForceMin)
+                    : minXAxisTicksCount,
             yAxis: (ticksCount && ticksCount.yAxis) || data.length,
         };
 
