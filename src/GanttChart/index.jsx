@@ -87,8 +87,9 @@ class Chart extends Component {
         const yDomain = data.map((item) => item.titleBar);
         const datesDomain = d3extent(datePlainList, (d) => new Date(d));
 
+        const roundMethod = (ticksCount && ticksCount.roundMethod) || Math.floor;
         const minXAxisTicksCount = Math.min(
-            Math.floor((datesDomain[1] - datesDomain[0]) / (1000 * 60 * 60 * 24)),
+            roundMethod((datesDomain[1] - datesDomain[0]) / (1000 * 60 * 60 * 24)),
             (ticksCount && ticksCount.xAxis) || 30
         );
         const AxesTicksCount = {

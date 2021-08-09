@@ -676,3 +676,6 @@ Add `renderBarDescription` prop for Gantt chart
 
 ### 6.3.2 
 Expand `axesProps (add ticksCount.minXAxisTicksCount)` prop for Gantt chart
+
+### 6.3.3
+Expand `axesProps (add ticksCount.roundMethod)` prop for Gantt chart
