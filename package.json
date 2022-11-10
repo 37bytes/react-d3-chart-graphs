@@ -1,5 +1,5 @@
 {
-  "name": "37bytes-react-d3-chart-graphs",
+  "name": "@37bytes/react-d3-chart-graphs",
   "version": "6.3.3",
   "description": "A javascript library for building charts components made with React.js and D3.js | fork @hh.ru/react-d3-chart-graphs",
   "main": "dist/index.js",
